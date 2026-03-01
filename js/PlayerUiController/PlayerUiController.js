@@ -66,14 +66,10 @@ export default class PlayerUiController {
         this.isVideoWithControlsActive = true
 
         this.$playPauseControls.classList.add('active')
-
-        this.$player.style.cursor = 'default'
     }
 
     hidePlaypauseControls() {
         this.$playPauseControls.classList.remove('active')
-
-        this.$player.style.cursor = 'none'
     }
 
     showTimer() {
@@ -108,28 +104,20 @@ export default class PlayerUiController {
         this.isVideoWithControlsActive = true
 
         this.$progressBar.classList.add('active')
-
-        this.$player.style.cursor = 'default'
     }
 
     hideProgressBar() {
         this.$progressBar.classList.remove('active')
-
-        this.$player.style.cursor = 'none'
     }
 
     showTimeInfo() {
         this.isVideoWithControlsActive = true
 
         this.$timeInfo.classList.add('active')
-
-        this.$player.style.cursor = 'default'
     }
 
     hideTimeInfo() {
         this.$timeInfo.classList.remove('active')
-
-        this.$player.style.cursor = 'none'
     }
 
     handleUserMousemoveActivity() {
