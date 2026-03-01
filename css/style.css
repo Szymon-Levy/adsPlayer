@@ -124,6 +124,18 @@ body {
     visibility: visible;
 }
 
+span#progress-line::before {
+    content: "";
+    width: 1.125rem;
+    height: 1.125rem;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
 #time-info {
     position: absolute;
     left: 4rem;
