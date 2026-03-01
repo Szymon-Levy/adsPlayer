@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+#player {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+#player video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#timer {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: #8adfff;
+    color: #000000;
+    padding: 10px 15px;
+}
+
+#timer.active {
+    display: block;
+}
+
+#user-play-overlay {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#user-play-overlay.active {
+    display: flex;
+}
+
+#playPause-controls {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color .3s, color .3s;
+}
+
+#playPause-controls:hover {
+    background-color: rgb(151, 182, 255);
+}
+
+#playPause-controls.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#play-btn,
+#pause-btn {
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+#play-btn img,
+#pause-btn img {
+    width: 1.4rem;
+}
+
+#pause-btn {
+    display: none;
+}
+
+#progress-bar {
+    position: absolute;
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+    height: .4rem;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#progress-line {
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: width 0.1s linear;
+    z-index: 2;
+}
+
+#progress-bar.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#time-info {
+    position: absolute;
+    left: 4rem;
+    right: 4rem;
+    bottom: 4.6rem;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2;
+}
+
+#time-info.active {
+    opacity: 1;
+    visibility: visible;
+}

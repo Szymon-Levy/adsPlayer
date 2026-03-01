@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link rel="icon" type="image/x-icon" href="https://www.drupal.org/files/issues/2020-02-26/favicon-v5.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="player">
+        <button id="user-play-overlay">Click to start watching</button>
+
+        <video src="videos/ad1.mp4" playsinline></video>
+
+        <div id="playPause-controls">
+            <button id="play-btn">
+                <img src="img/play.png">
+            </button>
+
+            <button id="pause-btn">
+                <img src="img/pause.png">
+            </button>
+        </div>
+
+        <div id="progress-bar">
+            <span id="progress-line"></span>
+        </div>
+
+        <div id="time-info">
+            <span id="current-time">0:00</span>
+            <span id="duration-time">0:00</span>
+        </div>
+
+        <span id="timer">Pozostało 0:00</span>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
