@@ -1,24 +1,16 @@
 export default [
+    // {
+    //     'type': 'dummy',
+    //     'src': 'videos/ad1.mp4'
+    // },
+    // {
+    //     'type': 'dummy',
+    //     'src': 'videos/ad2.mp4'
+    // },
     {
-        'type': 'content',
+        'type': 'pausedExposed',
         'src': 'videos/movie.mp4',
-        'skipAfter': 10
+        'pauseAt': 10,
+        'pauseAdSrc': 'img/ad.png'
     },
-    {
-        'type': 'exposed',
-        'src': 'videos/ad1.mp4'
-    },
-    {
-        'type': 'dummy',
-        'src': 'videos/ad2.mp4'
-    },
-    {
-        'type': 'exposed',
-        'src': 'videos/ad3.mp4'
-    },
-    {
-        'type': 'content',
-        'src': 'videos/movie.mp4',
-        'startFrom': 10
-    }
 ]

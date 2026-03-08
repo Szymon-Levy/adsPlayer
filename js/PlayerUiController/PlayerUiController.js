@@ -161,4 +161,22 @@ export default class PlayerUiController {
     updateTimeInfo() {
         this.$currentTime.textContent = this.formatTime(this.$video.currentTime)
     }
+
+    showPauseAd(src) {
+        const html = `
+            <div id="pause-ad">
+                <img src="${src}">
+            </div>
+        `
+
+        this.$player.insertAdjacentHTML('beforeend', html)
+    }
+
+    hidePauseAd() {
+        const ad = this.$player.querySelector('#pause-ad')
+
+        if (!ad) return
+        
+        ad.remove()
+    }
 }

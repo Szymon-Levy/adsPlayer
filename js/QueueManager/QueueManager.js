@@ -1,4 +1,5 @@
 import ExposedVideo from "../video/ExposedVideo.js"
+import PausedExposedVideo from "../video/PausedExposedVideo.js"
 import DummyVideo from "../video/DummyVideo.js"
 import ContentVideo from "../video/ContentVideo.js"
 
@@ -6,6 +7,7 @@ export default class QueueManager {
     constructor(config, playerUiController) {
         const typeMap = {
             'exposed': ExposedVideo,
+            'pausedExposed': PausedExposedVideo,
             'dummy': DummyVideo,
             'content': ContentVideo,
         }
